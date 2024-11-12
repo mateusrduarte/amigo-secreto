@@ -1,7 +1,19 @@
 let listaAmigos = [];
 
 function adicionar() {
-  listaAmigos.push(document.getElementById("nome-amigo").value);
+  let amigo = document.getElementById("nome-amigo");
+
+  if (amigo.value == "") {
+    alert("Informe o nome do amigo!");
+    return;
+  }
+
+  if (listaAmigos.includes(amigo.value)) {
+    alert("Nome já adicionado!");
+    return;
+  }
+
+  listaAmigos.push(amigo.value);
 
   document.getElementById("lista-amigos").innerHTML = listaAmigos;
   document.getElementById("nome-amigo").value = "";
