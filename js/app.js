@@ -20,7 +20,7 @@ function adicionar() {
 }
 
 function sortear() {
-  if (amigos.length < 4) {
+  if (listaAmigos.length < 4) {
     alert("Adicione pelo menos 4 amigos!");
     return;
   }
